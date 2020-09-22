@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>java数组</title>
+    <url>/2020/09/09/java%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<h2 id="java数组"><a href="#java数组" class="headerlink" title="java数组"></a>java数组</h2><h3 id="数组定义"><a href="#数组定义" class="headerlink" title="数组定义"></a>数组定义</h3><p>数组是一种数据类型，可以存储多个值，而不仅仅是一个值。</p>
+<p>我们来比较房屋和公寓楼。一套普通房屋通常只住一个家庭，但一栋公寓楼可以分为很多套公寓。要将信件送给居住在房屋中的家庭，需要指出房屋的唯一地址。要将信件送给居住在公寓楼中的家庭，需要写明公寓楼的唯一地址和公寓号。<a id="more"></a></p>
+<p>数组变量就像一个公寓楼变量。可以在其中存储很多（而不仅仅是一个）值。此类变量有多个公寓（元素），可以使用公寓号（索引）来引用它们。要执行此操作，请在数组变量名称后的方括号中指出要访问的数组元素的索引。</p>
+<p>公寓楼变量（数组变量）可以包含任何类型的元素。只需写入‘<strong>TypeName[] variable_name</strong>’而不是‘<strong>TypeName variable_name</strong>’</p>
+<table>
+<thead>
+<tr>
+<th><code>String[] list = new String[5];</code></th>
+<th>创建包含 <code>5</code> 个元素的 <code>String</code> 数组</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int listCount = list.length;</td>
+<td>将值 5 赋给 <code>listCount</code>，这是 <code>list</code> 数组中元素的数量。<code>list.length</code> 存储数组长度（元素数量）</td>
+</tr>
+<tr>
+<td>list[1] = “妈妈”; String s = list[1];</td>
+<td>将对象分配给数组元素时，需要在方括号中指出元素索引。</td>
+</tr>
+<tr>
+<td>for (int i = 0; i &lt; list.length; i++) {     System.out.println(list[i]); }</td>
+<td>在屏幕上显示所有数组元素的值。</td>
+</tr>
+<tr>
+<td>System.out.println(list[0]); System.out.println(list[1]); System.out.println(list[2]); System.out.println(list[3]); System.out.println(list[4]);</td>
+<td>将显示五个‘<strong>null</strong>’值。</td>
+</tr>
+</tbody></table>
+<p>数组变量需要额外的初始化。必须先创建一个容纳 N 个元素的容器，然后才能开始将值放入容器中。</p>
+<table>
+<thead>
+<tr>
+<th><code>String[] list = null;</code></th>
+<th><code>list</code> 数组变量为 <strong>null</strong>。它只能存储对包含元素的容器的引用。你必须单独创建容器。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>String[] list = new String[5];</code></td>
+<td>创建包含 <code>5</code> 个元素的容器，并分配对 <code>list</code> 变量的引用。此容器包含编号为 0、1、2、3 和 4 的 5 个公寓（元素）。</td>
+</tr>
+<tr>
+<td><code>String[] list = new String[1];</code></td>
+<td>创建包含 <code>1</code> 个元素的容器，并分配对 <code>list</code> 变量的引用。要向此容器内放入内容，我们要编写类似 <code>list[0] = &quot;哟！&quot;;</code> 的代码。</td>
+</tr>
+<tr>
+<td><code>String[] list = new String[0];</code></td>
+<td>创建包含 <code>0</code> 个元素的容器，并分配对 <code>list</code> 变量的引用。不能在此容器中存储任何内容。</td>
+</tr>
+</tbody></table>
+<p><strong>数组的基本情况：</strong></p>
+<ol>
+<li><p>数组由很多元素构成。</p>
+</li>
+<li><p>要访问某个元素，请指出其编号（索引）。</p>
+</li>
+<li><p>所有元素都属于同一类型。</p>
+</li>
+<li><p>所有元素的初始值都为 null；对于原始类型的数组，初始值为 0、0.0（对于小数）或 false（对于 boolean 值）。它与不在数组中的未初始化变量完全相同。</p>
+</li>
+<li><p>String[] list 仅声明一个变量。你需要先创建一个数组（容器），放入一些内容，然后才能使用它（请参见下面的示例）。</p>
+</li>
+<li><p>创建数组（容器）对象时，需要指出其长度或元素数量。使用 new TypeName[n]; 执行此操作。</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><code>String s; String[] list;</code></th>
+<th><code>s</code> 等于 null <code>list</code> 等于 null</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>list = new String[10]; int n = list.length;</code></td>
+<td><code>list</code> 变量存储对象的引用 – 一个 10 元素字符串数组 n 等于 10</td>
+</tr>
+<tr>
+<td><code>list = new String[0];</code></td>
+<td>现在，<code>list</code> 包含一个 <code>0</code> 元素数组。数组存在，但不能存储字符串。</td>
+</tr>
+<tr>
+<td><code>list = null; System.out.println(list[1]);</code></td>
+<td>这将抛出异常（运行时错误），并且程序将异常终止：<code>list</code> 包含 null 引用。</td>
+</tr>
+<tr>
+<td><code>list = new String[10]; System.out.println(list[11]);</code></td>
+<td>这将抛出异常（运行时错误）：数组索引超出范围。如果 <code>list</code> 包含 10 个元素，则有效索引为：0、1、2、3、4、5、6、7、8 和 9（总共 10 个索引）。</td>
+</tr>
+</tbody></table>
+<h3 id="内存中的数组"><a href="#内存中的数组" class="headerlink" title="内存中的数组"></a>内存中的数组</h3><p>数组在内存中的云</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Typora上传图片到hexo</title>
+    <url>/2020/09/05/Typora%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%88%B0hexo/</url>
+    <content><![CDATA[<h1 id="Typora上传图片到hexo的设置"><a href="#Typora上传图片到hexo的设置" class="headerlink" title="Typora上传图片到hexo的设置"></a>Typora上传图片到hexo的设置</h1><p>​    在使用hexo搭建了博客之后，寻找之后发现Typora是一款很好用的markdown编辑器，不过未经设置是无法上传图片的。</p>
+<p>​    关于图片和图片路径的设置如下：</p>
+<p>​    所有博客文件均保存在blog/source/下，首先在bolg/source下创建images文件夹用来存放博客中的图片，然后打开typora的偏好设置，进行如下设置。<a id="more"></a></p>
+<p><img src="https://img-blog.csdnimg.cn/2019090318384447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMyNjIzMzYz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>​    这样所有图片就会保存在/source/images/博客文件名/图片名</p>
+<p>​    如上设置便可以在hexo中同步图片显示。</p>
+<p>​    设置显示图片的方法要点：</p>
+<p>​    有可能在第一次设置的时候不生效，需要设置完毕写两篇以上的博文才可实现效果</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>使用Typora进行hexo个人博客的搭建</title>
+    <url>/2020/09/05/%E4%BD%BF%E7%94%A8Typora%E8%BF%9B%E8%A1%8Chexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h2 id="在typora中编写hexo博客基础教程"><a href="#在typora中编写hexo博客基础教程" class="headerlink" title="在typora中编写hexo博客基础教程"></a>在typora中编写hexo博客基础教程</h2><ul>
+<li><p>在windows命令行切换到管理员权限：runas /noprofile /user:Admin cmd</p>
+</li>
+<li><p>windows命令行中查看当前路径：chdir</p>
+</li>
+<li><p>在windows中查看当前文件夹命令：dir</p>
+</li>
+<li><p>初始化博客命令：sudo hexo init</p>
+<ul>
+<li>启动博客命令：hexo s 端口为：localhost:4000（起到实时预览作用，并未真正上传）</li>
+<li>新建文章命令：hexo n “文章标题” <ul>
+<li>文章所在位置为source/_post</li>
+</ul>
+</li>
+<li>生成文章命令为：hexo g</li>
+</ul>
+</li>
+<li><p>将hexo博客部署到github并公开使用：<a id="more"></a></p>
+<ul>
+<li><p>新建一个仓库：<img src="../images/%E4%BD%BF%E7%94%A8Typora%E8%BF%9B%E8%A1%8Chexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/image-20200905162625639.png" alt="image-20200905162625639"></p>
+</li>
+<li><p>部署个人博客的Github仓库的命名必须符合特定要求：<img src="../images/%E4%BD%BF%E7%94%A8Typora%E8%BF%9B%E8%A1%8Chexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/image-20200905162846369.png" alt="image-20200905162846369"></p>
+<p>后续在浏览器输入这个地址即可访问博客</p>
+</li>
+<li><p>部署到远端命令：hexo d</p>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>如何更改hexo主题</title>
+    <url>/2020/09/05/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9hexo%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="更改hexo主题"><a href="#更改hexo主题" class="headerlink" title="更改hexo主题"></a>更改hexo主题</h1><h2 id="如何将hexo主题更改为自己喜欢的"><a href="#如何将hexo主题更改为自己喜欢的" class="headerlink" title="如何将hexo主题更改为自己喜欢的"></a>如何将hexo主题更改为自己喜欢的</h2><hr>
+<ul>
+<li><p>第一步：下载主题</p>
+<p>git clone <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git">https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git</a> themes/自定义主题名</p>
+</li>
+<li><p>第二步：修改config.yml文件</p>
+<a id="more"></a>
+
+<p>更改theme中内容为自己的主题名，保存</p>
+</li>
+<li><p>第三步：</p>
+<p>hexo clean,hexo g,hexo d</p>
+</li>
+</ul>
+]]></content>
+  </entry>
+</search>
