@@ -108,6 +108,25 @@
 ]]></content>
   </entry>
   <entry>
+    <title>如何更改hexo主题</title>
+    <url>/2020/09/05/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9hexo%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="更改hexo主题"><a href="#更改hexo主题" class="headerlink" title="更改hexo主题"></a>更改hexo主题</h1><h2 id="如何将hexo主题更改为自己喜欢的"><a href="#如何将hexo主题更改为自己喜欢的" class="headerlink" title="如何将hexo主题更改为自己喜欢的"></a>如何将hexo主题更改为自己喜欢的</h2><hr>
+<ul>
+<li><p>第一步：下载主题</p>
+<p>git clone <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git">https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git</a> themes/自定义主题名</p>
+</li>
+<li><p>第二步：修改config.yml文件</p>
+<a id="more"></a>
+
+<p>更改theme中内容为自己的主题名，保存</p>
+</li>
+<li><p>第三步：</p>
+<p>hexo clean,hexo g,hexo d</p>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>使用Typora进行hexo个人博客的搭建</title>
     <url>/2020/09/05/%E4%BD%BF%E7%94%A8Typora%E8%BF%9B%E8%A1%8Chexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h2 id="在typora中编写hexo博客基础教程"><a href="#在typora中编写hexo博客基础教程" class="headerlink" title="在typora中编写hexo博客基础教程"></a>在typora中编写hexo博客基础教程</h2><ul>
@@ -137,25 +156,6 @@
 <li><p>部署到远端命令：hexo d</p>
 </li>
 </ul>
-</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>如何更改hexo主题</title>
-    <url>/2020/09/05/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9hexo%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="更改hexo主题"><a href="#更改hexo主题" class="headerlink" title="更改hexo主题"></a>更改hexo主题</h1><h2 id="如何将hexo主题更改为自己喜欢的"><a href="#如何将hexo主题更改为自己喜欢的" class="headerlink" title="如何将hexo主题更改为自己喜欢的"></a>如何将hexo主题更改为自己喜欢的</h2><hr>
-<ul>
-<li><p>第一步：下载主题</p>
-<p>git clone <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git">https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git</a> themes/自定义主题名</p>
-</li>
-<li><p>第二步：修改config.yml文件</p>
-<a id="more"></a>
-
-<p>更改theme中内容为自己的主题名，保存</p>
-</li>
-<li><p>第三步：</p>
-<p>hexo clean,hexo g,hexo d</p>
 </li>
 </ul>
 ]]></content>
